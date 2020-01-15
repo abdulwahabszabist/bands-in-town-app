@@ -1,0 +1,117 @@
+.App {
+  // background-color: #282c34;
+  min-height: 100vh;
+  position: relative;
+
+  header {
+    position: fixed;
+  }
+
+  .cover-all {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 65px);
+    position: relative;
+    padding-top: 65px;
+
+    .artist-backlay {
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      &::after {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+      }
+    }
+
+    .artist-info {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 20px;
+
+      .actions {
+        text-align: right;
+
+        button {
+          margin-right: 10px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns: auto;
+
+        .actions {
+          text-align: left;
+        }
+      }
+    }
+    .events-header {
+      margin-bottom: 20px;
+
+      .MuiTextField-root {
+        label {
+          color: #ffffff;
+        }
+        .MuiInputBase-root {
+          &::before {
+            border-color: #ffffff;
+          }
+          .MuiInputBase-input {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .upcoming-events {
+      .event-row {
+        .content {
+          display: grid;
+          align-items: center;
+          grid-template-columns: 30px 1fr 120px;
+          grid-gap: 15px;
+        }
+
+        .event-date {
+          display: flex;
+          flex-direction: column;
+          color: #259998;
+          text-transform: uppercase;
+          text-align: center;
+          .day {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 65px);
+    position: relative;
+    padding-top: 85px;
+  }
+}

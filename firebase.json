@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "band-in-town-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
